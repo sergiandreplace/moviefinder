@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');
+html,
+body,
+body * {
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    width: 100vw;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arvo;
+}
+
+header {
+    display: block;
+    width: 100%;
+    height: 240px;
+    background: darkolivegreen;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    display: block;
+    width: 100%;
+    padding: 36px 15px;
+    font-size: 44px;
+    color: white;
+    text-align: center;
+}
+
+header .search {
+    max-width: 480px;
+    height: 60px;
+    background: aliceblue;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    padding: 8px 12px;
+    font-size: 20px;
+    border: none;
+}
+
+.loading {
+    
+width: 100%;
+    
+height: 200px;
+    
+display: flex;
+    
+justify-content: center;
+    
+align-items: center;
+}
+
+.result {
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    align-items: center;
+    animation: fadein 1s;
+    padding: 20px;
+    justify-content: center;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.movie {
+    width: 360px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    box-shadow: 14px 14px 14px -15px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    position: inherit;
+    background-color: #ccc;
+    transition: opacity 2s ease-in;
+    margin-right: 10px;
+}
+
+.movie-backdrop {
+    position: absolute;
+}
+
+.movie-poster {
+    border-radius: 10px;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    position: absolute;
+    margin: 15px;
+    z-index: 10;
+    width: 140px;
+}
+
+.movie-content {
+    background: #ffffffcc;
+    width: 100%;
+    height: 238px;
+    border-radius: 10px;
+    position: relative;
+    padding: 15px;
+    padding-left: 163px;
+}
+
+.movie-title {
+    font-size: 28px;
+    max-height: 162px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.movie-overview {
+    bottom: 0px;
+    position: absolute;
+    margin: 15px;
+    margin-left: 0px;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    font-size: 10px;
+}
+
+.hidden {
+    display:none;
+}
